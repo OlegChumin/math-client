@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+calculator-service:
+  url: http://localhost:8080/api/calculator
+
+
+opentracing:
+  jaeger:
+    enable: true
+    service-name: math-client
+    udp-sender:
+      host: localhost
+      port: 6831
+    log-spans: true
+
+feature-flag.ccc-jaeger.tracing.enabled: true
+
+logging:
+  level:
+    org.example.jaeger_testing: DEBUG  # Включаем уровень DEBUG для всего приложения
+    org.example.jaeger_testing.aspect: DEBUG  # Включаем уровень DEBUG для пакета с аспектом
+    root: INFO  # Общий уровень логирования по умолчанию для всего приложения
