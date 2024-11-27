@@ -1,7 +1,7 @@
 plugins {
     id 'java'
-    id "org.springframework.boot" version "2.4.6" // Подключает плагин для работы со Spring Boot
-    id "io.spring.dependency-management" version "1.1.0" // Плагин для управления зависимостями Spring
+    id "org.springframework.boot" version "2.5.5" // Подключает плагин для работы со Spring Boot
+    id "io.spring.dependency-management" version "1.1.6" // Плагин для управления зависимостями Spring
 }
 
 group = 'ru.gpb.ccl.math.client'
@@ -25,7 +25,7 @@ repositories {
 
 dependencies {
     //REST API
-    implementation 'org.springframework.boot:spring-boot-starter-web:2.4.6'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 
     //SOAP
     //implementation 'org.springframework.boot:spring-boot-starter-web-services'
