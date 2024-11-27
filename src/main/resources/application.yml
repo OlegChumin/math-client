@@ -1,3 +1,9 @@
+spring:
+  application:
+    name: math-client
+  profiles:
+    active: default
+
 server:
   port: 8081
 
@@ -14,10 +20,13 @@ opentracing:
       port: 6831
     log-spans: true
 
-feature-flag.ccc-jaeger.tracing.enabled: true
+#feature-flag.ccc-jaeger.tracing.enabled: true
+feature-flag:
+  ccc-jaeger:
+    tracing:
+      enabled: true
+
 
 logging:
   level:
-    org.example.jaeger_testing: DEBUG  # Включаем уровень DEBUG для всего приложения
-    org.example.jaeger_testing.aspect: DEBUG  # Включаем уровень DEBUG для пакета с аспектом
-    root: INFO  # Общий уровень логирования по умолчанию для всего приложения
+    org.example.metrics.common: DEBUG

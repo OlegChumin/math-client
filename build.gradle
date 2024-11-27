@@ -21,11 +21,16 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
     //REST API
     implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    //Jaeger
+    implementation 'org.example:metrics-common:1.0.0.71'
+
 
     //SOAP
     //implementation 'org.springframework.boot:spring-boot-starter-web-services'
