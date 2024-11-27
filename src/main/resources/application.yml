@@ -13,11 +13,10 @@ calculator-service:
 
 opentracing:
   jaeger:
-    enable: true
-    service-name: math-client
-    udp-sender:
-      host: localhost
-      port: 6831
+    enabled: true
+    service-name: ${spring.application.name}
+    http-sender:
+      url: http://localhost:4318/api/traces
     log-spans: true
 
 #feature-flag.ccc-jaeger.tracing.enabled: true
